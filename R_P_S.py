@@ -1,14 +1,17 @@
 import random
+#for count how many times you played
 yes_count = 0
+#to play again
 while True:
 
     choice = ("rock", "paper", "scissor")
-    computer = random.choice(choice)
-    
+    computer = random.choice(choice) #computer choice
+
+    #to enter correct value
     player = None
     while player not in choice:
         player = input("Enter your choice: ") .lower()
-
+    #actual game
     if computer == player :
         print ("Computer",computer)
         print("Player",player)
@@ -41,11 +44,11 @@ while True:
             print ("Computer",computer)
             print("Player",player)
             print("You dont know ho to play!🤪")
-    
+    #want to play again or not
     again = input("Do you want to continue (yes/no):") .lower()
 
     if again == "yes":
-        yes_count += 1
+        yes_count += 1#for count
     else:
         print ("You played", yes_count, "times")
         break
