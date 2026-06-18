@@ -44,11 +44,12 @@ while True:
             print ("Computer",computer)
             print("Player",player)
             print("You dont know ho to play!🤪")
+            
     #want to play again or not
     again = input("Do you want to continue (yes/no):") .lower()
 
     if again == "yes":
-        yes_count += 1#for count
+        yes_count += 1 #for count
     else:
         print ("You played", yes_count, "times")
         break
