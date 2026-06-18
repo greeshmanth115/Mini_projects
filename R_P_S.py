@@ -51,7 +51,7 @@ while True:
     if again == "yes":
         yes_count += 1 #for count
     else:
-        print ("You played", yes_count, "times")
+        print ("You played", yes_count + 1, "times")
         break
 
 print("Thanks for playing!")
