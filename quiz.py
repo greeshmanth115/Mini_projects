@@ -4,16 +4,16 @@ def new_game():
 
     guesses = [] #empty guesses list
     correct_guesses = 0
-    question_num = 0
+    question_num = 1
     for key in questions: #prints question
         print("---------------------------------")
         print(key)
-        for i in options[question_num]:
+        for i in options[question_num-1]:
             print(i)
 
         guess = input("Enter (A, B, C or D): ") .upper()
         guesses.append(guess)#store in guesses list
-
+        question_num += 1
         correct_guesses += check_answer(questions.get(key),guess) #questios.get(key)=answer
     display_score(correct_guesses,guesses)
 
