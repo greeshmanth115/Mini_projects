@@ -17,34 +17,11 @@ while True:
         print("Player",player)
         print("It's tie!🤝")
 
-    elif player == "rock":
-        if computer == "paper":
-            print ("Computer",computer)
-            print("Player",player)
-            print("You dont know ho to play!🤪")
-        elif computer == "scissor":
-            print ("Computer",computer)
-            print("Player",player)
-            print("You win!🥳")
-    elif player == "paper":
-        if computer == "rock":
-            print ("Computer",computer)
-            print("Player",player)
-            print("You win!🥳")
-        elif computer == "scissor":
-            print ("Computer",computer)
-            print("Player",player)
-            print("You dont know ho to play!🤪")
-    elif player == "scissor":
-        if computer == "paper":
-            print ("Computer",computer)
-            print("Player",player)
-            print("You win!🥳")
-        elif computer == "rock":
-            print ("Computer",computer)
-            print("Player",player)
-            print("You dont know ho to play!🤪")
-            
+    elif player == "rock" and computer == "scissor" or player == "paper" and computer == "rock" or player == "scissor" and computer == "paper":
+        print ("You win!🥇")
+
+    else :
+        print ("You lost🫢")
     #want to play again or not
     again = input("Do you want to continue (yes/no):") .lower()
 
@@ -54,4 +31,4 @@ while True:
         print ("You played", yes_count + 1, "times")
         break
 
-print("Thanks for playing!")
+print("Thanks for playing!🥰")
