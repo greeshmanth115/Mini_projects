@@ -3,7 +3,7 @@ print("Welcome to our food ordering system...!😋")
 count = 0
 while True: #for counting orders
 
-    menu = ["Pizza(1)", "Burger(2)", "Chicken Roll(3)", "Sushi(4)", "Fries(5)", "icecream(6)"]
+    menu = ["Pizza(1)", "Burger(2)", "Chicken Roll(3)", "Sushi(4)", "Fries(5)", "ice cream(6)"]
     order = ["1", "2", "3", "4", "5", "6"]
     print("Please select for the below menu")
     print("⬇︎".center(8, " "))
@@ -93,11 +93,11 @@ while True: #for counting orders
         print("Size: small(1), medium(2), large(3): ")
         p = input("Please enter number for size: ")
         if p == "1":
-            print("You have selected small icecream ")
+            print("You have selected small ice cream ")
         elif p == "2":
-            print("You have selected medium icecream ")
+            print("You have selected medium ice cream ")
         elif p == "3":
-            print("You have selected large icecream ")
+            print("You have selected large ice cream ")
         else:
             print("Invalid size selection")
 
