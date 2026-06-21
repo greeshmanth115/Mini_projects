@@ -1,3 +1,4 @@
+#----------------Rock Paper Scissor----------------
 import random
 #for count how many times you played
 yes_count = 0

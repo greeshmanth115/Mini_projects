@@ -1,3 +1,4 @@
+#---------------Quiz game-----------------
 count = 0 #count how many times you played
 
 def new_game():
