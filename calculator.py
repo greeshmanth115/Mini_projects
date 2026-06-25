@@ -1,61 +1,41 @@
-#------------Basic calculater---------------
-print("Welcom to calculator🤝")
+#-----------------Basic Calculator-------------------
+print("Welcome to Calculator 🤝")
 
-while True: 
+# Function to get a valid number
+def get_number(message):
+    while True:
+        num = input(message)
+        if num == "":
+            print("Please enter a value!")
+            continue
+        try:
+            return int(num)
+        except ValueError:
+            print("Invalid input! Please enter a number.")
 
-    a = input("Enter a first number: ")
+# Function to get a valid operator
+def get_operator():
+    while True:
+        op = input("Enter the operator (+, -, *, /): ")
+        if op == "":
+            print("Please enter a symbol!")
+        elif op in "+-*/":
+            return op
+        else:
+            print("Invalid operator!")
 
-    if a =="":
-        print("Please enter a value!")
-    
-    try:
-        a = int(a)
-
-        break
-    except ValueError:
-        print("Invalid Input in numbers!")
-
-while True:
-    b = input("Enter a second number: ")
-
-    if b =="":
-        print("Please enter a value!")
-    try:
-        b = int(b)
-        break
-    except ValueError:
-        print("Invalid Input in numbers!")
-
-while True:
-
-    c = input("Enter the symbol you want to calculate(+,-,*,/): ")
-
-    if c =="":
-        print("Please enter a symbol!")
-    
-    try:
-
-        if c not in ("+","-","*","/"):
-            print("Invalid Input in symbols!")
-        break
-    except ValueError:
-        print("Invalid Input in numbers!")
+a = get_number("Enter the first number: ")
+b = get_number("Enter the second number: ")
+c = get_operator()
 
 if c == "+":
-    add = a+b
-    print("Addition of your two number is:",str(add))
-
+    print("Result:", a + b)
 elif c == "-":
-    sub = a-b
-    print("Subtraction of your two number is:",str(sub))
-
+    print("Result:", a - b)
 elif c == "*":
-    mul = a*b
-    print("Multiplication of your two number is:",str(mul))
-elif c == "/":
+    print("Result:", a * b)
+else:
     try:
-        div = a/b
-        print("Division of your two number is:",str(div))
-
+        print("Result:", a / b)
     except ZeroDivisionError:
-        print("Number cannot divided by zero you idiot!")
+        print("Cannot divide by zero!")
