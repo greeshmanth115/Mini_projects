@@ -2,9 +2,9 @@
 print("Welcome to Calculator 🤝")
 
 # Function to get a valid number
-def get_number(message):
+def get_number(self):
     while True:
-        num = input(message)
+        num = input(self)
         if num == "":
             print("Please enter a value!")
             continue
@@ -24,8 +24,8 @@ def get_operator():
         else:
             print("Invalid operator!")
 
-a = get_number("Enter the first number: ")
-b = get_number("Enter the second number: ")
+a = get_number("Enter the 1st number: ")
+b = get_number("Enter the 2nd number: ")
 c = get_operator()
 
 if c == "+":
